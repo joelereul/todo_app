@@ -1,7 +1,7 @@
 {
   "name": "todo_app",
   "description": "A Hello World app",
-  "package_path": "todo_app.tar.gz",
+  "package_path": "todo_app.tgz",
   "icons": {
     "16": "/icons/icon16x16.png",
     "48": "/icons/icon48x48.png",
