@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script>
+			function install()
+			{
+				var request = window.navigator.mozApps.install("manifest.webapp");
+				request.onsuccess = function () {
+					// Save the App object that is returned
+					var appRecord = this.result;
+					alert('Installation successful!');
+				};
+				request.onerror = function () {
+					// Display the error information from the DOMError object
+					alert('Install failed, error: ' + this.error.name);
+				};		
+			}
+		</script>
+	</head>
+	<body onload="alert('starting ?');install()">
+		<div>install should start shortly</div>
+	</body>
+</html>
