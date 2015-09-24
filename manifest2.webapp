@@ -1,6 +1,7 @@
 {
   "name": "todo_app",
   "description": "A Hello World app",
+  "version" : "2.3",
   "package_path": "todo_app.zip",
   "icons": {
     "16": "/icons/icon16x16.png",
