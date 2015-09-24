@@ -3,7 +3,7 @@
 		<script>
 			function install()
 			{
-				var request = window.navigator.mozApps.install("manifest.webapp");
+				var request = window.navigator.mozApps.install("/todo_app/manifest.webapp");
 				request.onsuccess = function () {
 					// Save the App object that is returned
 					var appRecord = this.result;
