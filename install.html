@@ -3,7 +3,7 @@
 		<script>
 			function install()
 			{
-				var request = window.navigator.mozApps.install("https://joelereul.github.io/todo_app/manifest2.webapp");
+				var request = window.navigator.mozApps.installPackage("https://joelereul.github.io/todo_app/manifest2.webapp");
 				request.onsuccess = function () 
 				{
 					// Save the App object that is returned
