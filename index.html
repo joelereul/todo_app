@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+    <link href="style/headers.css" rel="stylesheet" type="text/css">
+    <link href="style/drawer.css" rel="stylesheet" type="text/css">
+    <link href="style/lists.css" rel="stylesheet" type="text/css">
+    <link href="style/switches.css" rel="stylesheet" type="text/css">
+    <link href="style/custom.css" rel="stylesheet" type="text/css">
+    <link href="style/edit_mode.css" rel="stylesheet" type="text/css">
+    <link href="style/input_areas.css" rel="stylesheet" type="text/css">
+
+    <title>A simple TODO app</title>
+
+    <!-- Inline scripts are forbidden in Firefox OS apps (CSP restrictions),
+         so we use a script file. -->
+    <script src="app.js" defer></script>
+
+  </head>
+
+  <body>
+    <!-- This code is in the public domain. Enjoy! -->
+
+	<section data-type="sidebar">
+		<header>
+			<menu type="toolbar">
+			<a href="#content"><span class="icon icon-back">back</span></a>
+			</menu>
+			<h1>Actions</h1>
+		</header>
+		<nav>
+			<ul>
+			<li><a href="#action1">Action1</a></li>
+			<li><a href="#action2">Action2</a></li>
+			</ul>
+		</nav>
+	</section>
+	<section id="drawer" role="region">
+		<header class="fixed">
+			<a href="#"><span class="icon icon-menu">hide sidebar</span></a>
+			<a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+			<menu type="toolbar">
+			<button id="showAddTaskEdit"><span class="icon icon-add">add</span></button>
+			</menu>
+			<h1>My TODO app</h1>
+		</header>
+		<div role="main">
+			<section data-type="list">
+				<ul id="taskList">
+				</ul>
+			</section>
+			<section data-type="list">
+				<ul data-type="edit">
+				<li>
+				<label class="pack-checkbox">
+				<input type="checkbox">
+				<span></span>
+				</label>
+				<p>Trash old clothes</p>
+				</li>
+				<li>
+				<label class="pack-checkbox">
+				<input type="checkbox">
+				<span></span>
+				</label>
+				<p>Buy a FxOS phone</p>
+				</li>
+				<li>
+				<label class="pack-checkbox">
+				<input type="checkbox">
+				<span></span>
+				</label>
+				<p>Contribute to Mozilla</p>
+				</li>
+				</ul>
+			</section>
+		</div>
+	</section>
+	<form role="dialog" data-type="edit" id="addTaskEdit" style="display:none">
+		<section role="region">
+			<header>
+				<button id="hideAddTaskEdit" type="button" style="pointer-events:auto"><span class="icon icon-close">close</span></button>
+				<menu type="toolbar">
+				<button id="submitAddTaskEdit" type="button">done</button>
+				</menu>
+				<h1>Edit</h1>
+			</header>
+			<p style="pointer-events:auto">
+				<input type="text" placeholder="Name" required="" name="taskName">
+				<button type="reset">Clear</button>
+			</p>
+			<p style="pointer-events:auto">
+				<textarea placeholder="Description" required="" name="taskDescription"></textarea>
+			</p>
+		</section>
+	</form>
+</body>
+
+</html>
