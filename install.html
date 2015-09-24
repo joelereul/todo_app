@@ -3,8 +3,9 @@
 		<script>
 			function install()
 			{
-				var request = window.navigator.mozApps.install("/todo_app/manifest.webapp");
-				request.onsuccess = function () {
+				var request = window.navigator.mozApps.install("https://joelereul.github.io/todo_app/manifest.webapp");
+				request.onsuccess = function () 
+				{
 					// Save the App object that is returned
 					var appRecord = this.result;
 					alert('Installation successful!');
@@ -16,7 +17,7 @@
 			}
 		</script>
 	</head>
-	<body onload="alert('starting ?');install()">
+	<body onload="alert('starting https://joelereul.github.io/todo_app/manifest.webapp ?');install()">
 		<div>install should start shortly</div>
 	</body>
 </html>
